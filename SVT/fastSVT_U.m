@@ -27,7 +27,6 @@ for i = 1:i_max
     if mod(i,50) == 0
         delta = delta/1.1;    % This is very important for stablizing convergence.
     end                       % Don't know the reas
-    [U, S, V] = svds(Y0, r);
     if i > i_reuse && q < q_reuse
         [U,S,V,Q] = rsvdBKI_SVT(Y0, r, p, U);
         q = q + 1;
