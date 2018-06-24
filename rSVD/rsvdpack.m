@@ -19,7 +19,7 @@ T = A'*Q;
 [V, S, U] = eigSVD(T);
 x = kn-k+1:kn;
 S = S(x, x);
-U = Q*v;
+U = Q*U;
 U = U(:,x);
 V = V(:,x);
 end

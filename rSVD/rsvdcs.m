@@ -2,7 +2,6 @@ function [U, S, V] = rsvdcs(A, k, p)
 s = 5;
 kn = k+s;
 [m,n]= size(A);
-%ind = randperm(n);
 B = randn(n, kn);
 if p == 0
     Q = A*B;

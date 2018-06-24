@@ -3,7 +3,7 @@ s = 5;
 [m,n]= size(A);
 B= randn(n, k+s);
 if i == 0
-    Q = eigPCA(A*B);
+    [Q, ~, ~] = eigSVD(A*B);
 else
     [Q, ~] = lu(A*B);
 end
