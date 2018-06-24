@@ -1,4 +1,4 @@
-﻿# Programs of fast SVT algorithm
+# Programs of fast SVT algorithm
 ---
 
 ##1.Main algorithms
@@ -25,6 +25,29 @@ rSVD/rsvdcs.m ---- Compressed SVD using Gaussian projection matrix in [4]
 
 SVT/SVT.m ---- Singular value thresholding algorithm with 'svds' in Matlab in [5]
 
+SVT/SVTlansvd.m ---- Singular value thresholding algorithm with 'lansvd' in PROPACK[6]
+
+##3.Experiments of the testing
+
+(1) Comparision of randomized SVD algorithms
+
+rSVD/test.m is used for the experiment in comparing the cputime and relative error of basic rSVD, rsvdpack, pcafast, rsvdcs and rSVD-PI. The sequences of calculating the ralative error are commented because of the huge memory it needs. There are 3 nonzeros can be used in the test.
+
+rSVD/test2.m is used for the experiment in comparing the rSVD-PI with rSVD-BKI with the svds a basic line.
+
+rSVD/ml.mat is the matrix cut from 10M movielens dataset[7]. rSVD/sample.m is used to sample some point from the initial sparse matrix.
+
+(2) The SVT for image recovery
+
+SVT/new4.jpg is the image used in this section. SVT/pic_Omega.mat owns Ome(20% nonzeros) and Ome10(10% nonzeros). 
+
+SVT/testSVT_pic.m is used to test the SVT in image recovery. The comment can be changed to see the differences between SVT algorithm and fastSVT algorithm.
+
+(3) The SVT for rating matrix completion
+
+Firstly you should get the Movielens datasets[7] from there website, then read the initial data matrix with CSR format with variable 'Origin'(3 columns with CSR format), and the run the SVT/data_init.m to divide the dataset into 80% and 20% or 90% and 10%(controlled by the variable 'percent'). Then run the SVT/testSVT_ml.m. The delta of 20M movielen dataset is 4 compared with 5 of 10M dataset.
+
+
 ##Reference
 
 [1] N Halko, P. G Martinsson, and J. A Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. Siam Review, 53(2):217–288, 2011.
@@ -36,3 +59,8 @@ SVT/SVT.m ---- Singular value thresholding algorithm with 'svds' in Matlab in [5
 [4] N. Benjamin Erichson, Steven L. Brunton, and J. Nathan Kutz. Compressed singular value decomposition for image and video processing. In Proc. IEEE International Conference on Computer Vision (ICCV), Oct 2017.
 
 [5] Jian Feng Cai, Emmanuel J Cand`es, and Zuowei Shen. A singular value thresholding algorithm for matrix completion. SIAM Journal on Optimization, 20(4):1956–1982, 2010.
+
+[6] Rasmus Munk Larsen. PROPACK-software for large and sparse svd calculations. Available online. URL http://sun.stanford.edu/rmunk/PROPACK, 2004.
+
+[7] F. Maxwell Harper and Joseph A. Konstan. The movielens datasets: History and context. ACM Transactions on Interactive Intelligent Systems (TiiS), 5(4):19, 2016.
+
