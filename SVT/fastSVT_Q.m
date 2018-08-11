@@ -1,4 +1,5 @@
 function [X, iters, k] = fastSVT_Q(M, tol, ran, i_reuse, q_reuse, delta)
+% The ran is a new parameter for control the result matrix value's range
 [m, n]= size(M);
 Omega = spones(M);
 Ns = sum(sum(Omega))
@@ -68,6 +69,8 @@ for i = 1:i_max
         X = U(:, x)*V(:, x)';
         X(X<ran(1)) = ran(1);
         X(X>ran(2)) = ran(2);
+        k = r;
+        iters = i;
         break;
     end
         if err > err_before
