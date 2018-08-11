@@ -1,4 +1,5 @@
 function [U, S, V] = rSVDBKI(A, k, p, s)
+% this is fast randQB method using Blocked Krylove subsapce 
 if nargin < 4
     s = 5;
 end

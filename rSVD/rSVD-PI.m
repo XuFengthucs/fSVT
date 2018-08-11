@@ -1,4 +1,5 @@
 function [U, S, V] = rSVDPI(A, k, i)
+% This is fast randQB method
 s = 5;
 [m,n]= size(A);
 B= randn(n, k+s);

@@ -1,5 +1,5 @@
 function [U, S, V] = rSVDpack(A, k, p)
-% The method in [Voronin and Martinsson, 2015] paper
+% The method in [Voronin and Martinsson, 2015] paper 
 s = 5;
 [m, n] = size(A);
 B = randn(n, k+s);
