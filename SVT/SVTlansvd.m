@@ -1,4 +1,5 @@
 function [X, iters, k] = SVTlansvd(M, tol, ran, delta)
+% This is the method in [Cai et al., 2010] using lansvd
 [m, n]= size(M);
 Omega = spones(M);
 Ns = sum(sum(Omega))

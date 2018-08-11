@@ -1,4 +1,5 @@
-function [U, S, V, Q] = rsvdBKI_SVT(A, k, i, Q)
+function [U, S, V, Q] = rSVDBKIr(A, k, i, Q)
+% This is a modification of rSVD-BKI which can reuse the subspace
 s = 5;
 if nargin == 3
     [m,n]= size(A);

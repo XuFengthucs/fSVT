@@ -28,15 +28,15 @@ for i = 1:i_max
         delta = delta/1.1;    % This is very important for stablizing convergence.
     end                       % Don't know the reas
     if i > i_reuse && q < q_reuse
-        [U,S,V,Q] = rsvdBKI_SVT(Y0, r, p, U);
+        [U,S,V,Q] = rSVDBKIr(Y0, r, p, U);
         q = q + 1;
     else
-        [U,S,V,Q] = rsvdBKI_SVT(Y0, r, p);
+        [U,S,V,Q] = rSVDBKIr(Y0, r, p);
         q = 0;
     end
     while S(1)>tau
         r=r+l;
-        [U,S,V,Q] = rsvdBKI_SVT(Y0, r, p);
+        [U,S,V,Q] = rSVDBKIr(Y0, r, p);
     end
     for j= 1:r,
         if S(j)> tau,
