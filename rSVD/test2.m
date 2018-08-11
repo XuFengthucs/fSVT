@@ -17,7 +17,7 @@ time_0 = time/niter;
 time = 0;
 for i = 1:niter
 t = cputime;
-[U1, S1, V1] = rsvdPI(A, k, 2);
+[U1, S1, V1] = rSVDPI(A, k, 2);
 time = time + cputime - t;
 end
 time_1 = time/niter;
@@ -26,7 +26,7 @@ time_1 = time/niter;
 time = 0;
 for i = 1:niter
 t = cputime;
-[U2, S2, V2] = rsvdPI(A, k, 15);
+[U2, S2, V2] = rSVDPI(A, k, 15);
 time = time + cputime - t;
 end
 time_2 = time/niter;
@@ -35,7 +35,7 @@ time_2 = time/niter;
 time = 0;
 for i = 1:niter
 t = cputime;
-[U3, S3, V3] = rsvdBKI(A, k, 4);
+[U3, S3, V3] = rSVDBKI(A, k, 4);
 time = time + cputime - t;
 end
 time_3 = time/niter;

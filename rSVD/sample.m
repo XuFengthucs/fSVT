@@ -1,4 +1,5 @@
 function M = sample(A, percent)
+% This function is used for randomly sample percent% points from matrix A
 o = A;
 a = o';
 [i, j, s] = find(a);

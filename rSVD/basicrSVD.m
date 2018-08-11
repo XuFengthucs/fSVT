@@ -1,4 +1,5 @@
-function [U, S, V] = brsvd(A, k, p)
+function [U, S, V] = basicrSVD(A, k, p)
+% the randQB method in [Halko et al., 2011] paper 
 s = 5;
 [m, n] = size(A);
 B = randn(n, k+s);

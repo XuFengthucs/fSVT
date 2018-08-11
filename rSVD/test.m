@@ -8,13 +8,13 @@ load ml.mat;
 
 niter = 1;
 k = 100;
-p = 0;
+p = 0; % This can be modified for different power iteration
 Anorm = norm(A, 'fro');
 
 time = 0;
 for i = 1:niter
 t = cputime;
-[U0, S0, V0] = brsvd(A, k, p);
+[U0, S0, V0] = basicrSVD(A, k, p);
 time = time + cputime - t;
 end
 time_0 = time/niter;
@@ -23,7 +23,7 @@ time_0 = time/niter;
 time = 0;
 for i = 1:niter
 t = cputime;
-[U1, S1, V1] = rsvdcs(A, k, p);
+[U1, S1, V1] = cSVD(A, k, p);
 time = time + cputime - t;
 end
 time_1 = time/niter;
@@ -32,7 +32,7 @@ time_1 = time/niter;
 time = 0;
 for i = 1:niter
 t = cputime;
-[U2, S2, V2] = rsvdpack(A, k, p);
+[U2, S2, V2] = rSVDpack(A, k, p);
 time = time + cputime - t;
 end
 time_2 = time/niter;
@@ -50,7 +50,7 @@ time_3 = time/niter;
 time = 0;
 for i = 1:niter
 t = cputime;
-[U4, S4, V4] = rsvdPI(A, k, p);
+[U4, S4, V4] = rSVDPI(A, k, p);
 time = time + cputime - t;
 end
 time_4 = time/niter;

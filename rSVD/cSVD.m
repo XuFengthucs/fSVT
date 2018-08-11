@@ -1,4 +1,6 @@
-function [U, S, V] = rsvdcs(A, k, p)
+function [U, S, V] = cSVD(A, k, p)
+% The method in [Benjamin Erichson et al., 2017] papaer using Gaussian
+% matrix
 s = 5;
 kn = k+s;
 [m,n]= size(A);

@@ -1,4 +1,5 @@
 function [U, S, V] = pcafast(A, k, p)
+% The method in [Li et al., 2017] paper
 s = 5;
 [m, n] = size(A);
 B = randn(n, k+s);

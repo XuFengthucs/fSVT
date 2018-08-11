@@ -1,4 +1,4 @@
-function [U, S, V] = rsvdBKI(A, k, p, s)
+function [U, S, V] = rSVDBKI(A, k, p, s)
 if nargin < 4
     s = 5;
 end

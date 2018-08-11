@@ -1,4 +1,4 @@
-function [U, S, V] = rsvdPI(A, k, i)
+function [U, S, V] = rSVDPI(A, k, i)
 s = 5;
 [m,n]= size(A);
 B= randn(n, k+s);
