@@ -3,29 +3,29 @@
 
 ##1.Main algorithms
 
-rSVD/eigSVD.m ---- computes the singular value decomposition with eigendecomposition
+rSVD/eigSVD.m ---- computes the singular value decomposition with eigendecomposition in [1]
 
-rSVD/rSVDPI.m ---- fast randomized SVD with power iteration
+rSVD/rSVDPI.m ---- fast randomized SVD with power iteration in [1]
 
-rSVD/SVDBKI.m ---- fast randomized SVD with block Krylov-subspace iteration
+rSVD/SVDBKI.m ---- fast randomized SVD with block Krylov-subspace iteration in [1]
 
-SVT/fastSVT_Q.m ---- fast SVT with subspace Q reuse
+SVT/fastSVT_Q.m ---- fast SVT with subspace Q reuse in [1]
 
-SVT/fastSVT_U.m ---- fast SVT with subspace U reuse
+SVT/fastSVT_U.m ---- fast SVT with subspace U reuse in [1]
 
 ##2.Other algorithms for comparson
 
-rSVD/basicrSVD.m ---- Basic randomized SVD in [1]
+rSVD/basicrSVD.m ---- Basic randomized SVD in [2]
 
-rSVD/pcafast.m ---- randomized SVD in [2]
+rSVD/pcafast.m ---- randomized SVD in [3]
 
-rSVD/rSVDpack.m ---- randomized SVD in [3]
+rSVD/rSVDpack.m ---- randomized SVD in [4]
 
-rSVD/cSVD.m ---- Compressed SVD using Gaussian projection matrix in [4]
+rSVD/cSVD.m ---- Compressed SVD using Gaussian projection matrix in [5]
 
-SVT/SVT.m ---- Singular value thresholding algorithm with 'svds' in Matlab in [5]
+SVT/SVT.m ---- Singular value thresholding algorithm with 'svds' in Matlab in [6]
 
-SVT/SVTlansvd.m ---- Singular value thresholding algorithm with 'lansvd' in PROPACK[6]
+SVT/SVTlansvd.m ---- Singular value thresholding algorithm with 'lansvd' in PROPACK[7]
 
 ##3.Experiments of the testing
 
@@ -45,22 +45,24 @@ SVT/testSVT_pic.m is used to test the SVT in image recovery. The comment can be 
 
 (3) The SVT for rating matrix completion
 
-Firstly you should get the Movielens datasets[7] from there website, then read the load data matrix with CSR format with variable 'Origin'(3 columns with CSR format), and the run the SVT/data_init.m to divide the dataset into 80% and 20% or 90% and 10%(controlled by the variable 'percent'). Then run the SVT/testSVT_ml.m. The delta of 20M movielen dataset is 4 compared with 5 of 10M dataset.
+Firstly you should get the Movielens datasets [8] from there website https://grouplens.org/datasets/movielens/, then read the load data matrix with CSR format with variable 'Origin'(3 columns with CSR format), and the run the SVT/data_init.m to divide the dataset into 80% and 20% or 90% and 10%(controlled by the variable 'percent'). Then run the SVT/testSVT_ml.m. The delta of 20M movielen dataset is 4 compared with 5 of 10M dataset.
 
 
 ##Reference
 
-[1] N Halko, P. G Martinsson, and J. A Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. Siam Review, 53(2):217â€?88, 2011.
+[1] Xu Feng, Wenjian Yu, and Yaohang Li, "Faster matrix completion using randomized SVD," in Proc. the 30th IEEE International Conference on Tools with Artificial Intelligence (ICTAI) , Volos, Greece, Nov. 2018 (accepted).
 
-[2] H. Li, G. C. Linderman, A. Szlam, K. P. Stanton, Y. Kluger, and M. Tygert. Algorithm 971: An implementation of a randomized algorithm for principal component analysis. Acm Transactions on Mathematical Software, 43(3):1â€?4, 2017.
+[2] N Halko, P. G Martinsson, and J. A Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. Siam Review, 53(2):217â€?88, 2011.
 
-[3] Sergey Voronin and PerGunnar Martinsson. Rsvdpack: An implementation of randomized algorithms for computing the singular value, interpolative, and cur decompositions of matrices on multi-core and gpu architectures. arXiv preprint arXiv:1502.05366, 2015.
+[3] H. Li, G. C. Linderman, A. Szlam, K. P. Stanton, Y. Kluger, and M. Tygert. Algorithm 971: An implementation of a randomized algorithm for principal component analysis. Acm Transactions on Mathematical Software, 43(3):1â€?4, 2017.
 
-[4] N. Benjamin Erichson, Steven L. Brunton, and J. Nathan Kutz. Compressed singular value decomposition for image and video processing. In Proc. IEEE International Conference on Computer Vision (ICCV), Oct 2017.
+[4] Sergey Voronin and PerGunnar Martinsson. Rsvdpack: An implementation of randomized algorithms for computing the singular value, interpolative, and cur decompositions of matrices on multi-core and gpu architectures. arXiv preprint arXiv:1502.05366, 2015.
 
-[5] Jian Feng Cai, Emmanuel J Cand`es, and Zuowei Shen. A singular value thresholding algorithm for matrix completion. SIAM Journal on Optimization, 20(4):1956â€?982, 2010.
+[5] N. Benjamin Erichson, Steven L. Brunton, and J. Nathan Kutz. Compressed singular value decomposition for image and video processing. In Proc. IEEE International Conference on Computer Vision (ICCV), Oct 2017.
 
-[6] Rasmus Munk Larsen. PROPACK-software for large and sparse svd calculations. Available online. URL http://sun.stanford.edu/rmunk/PROPACK, 2004.
+[6] Jian Feng Cai, Emmanuel J Cand`es, and Zuowei Shen. A singular value thresholding algorithm for matrix completion. SIAM Journal on Optimization, 20(4):1956â€?982, 2010.
 
-[7] F. Maxwell Harper and Joseph A. Konstan. The movielens datasets: History and context. ACM Transactions on Interactive Intelligent Systems (TiiS), 5(4):19, 2016.
+[7] Rasmus Munk Larsen. PROPACK-software for large and sparse svd calculations. Available online. URL http://sun.stanford.edu/rmunk/PROPACK, 2004.
+
+[8] F. Maxwell Harper and Joseph A. Konstan. The movielens datasets: History and context. ACM Transactions on Interactive Intelligent Systems (TiiS), 5(4):19, 2016.
 
