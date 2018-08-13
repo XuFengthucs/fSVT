@@ -52,15 +52,15 @@ Firstly you should get the Movielens datasets [8] from there website https://gro
 
 [1] Xu Feng, Wenjian Yu, and Yaohang Li, "Faster matrix completion using randomized SVD," in Proc. the 30th IEEE International Conference on Tools with Artificial Intelligence (ICTAI) , Volos, Greece, Nov. 2018 (accepted).
 
-[2] N Halko, P. G Martinsson, and J. A Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. Siam Review, 53(2):217â€?88, 2011.
+[2] N Halko, P. G Martinsson, and J. A Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. Siam Review, 53(2):217-288, 2011.
 
-[3] H. Li, G. C. Linderman, A. Szlam, K. P. Stanton, Y. Kluger, and M. Tygert. Algorithm 971: An implementation of a randomized algorithm for principal component analysis. Acm Transactions on Mathematical Software, 43(3):1â€?4, 2017.
+[3] H. Li, G. C. Linderman, A. Szlam, K. P. Stanton, Y. Kluger, and M. Tygert. Algorithm 971: An implementation of a randomized algorithm for principal component analysis. Acm Transactions on Mathematical Software, 43(3):1-14, 2017.
 
 [4] Sergey Voronin and PerGunnar Martinsson. Rsvdpack: An implementation of randomized algorithms for computing the singular value, interpolative, and cur decompositions of matrices on multi-core and gpu architectures. arXiv preprint arXiv:1502.05366, 2015.
 
 [5] N. Benjamin Erichson, Steven L. Brunton, and J. Nathan Kutz. Compressed singular value decomposition for image and video processing. In Proc. IEEE International Conference on Computer Vision (ICCV), Oct 2017.
 
-[6] Jian Feng Cai, Emmanuel J Cand`es, and Zuowei Shen. A singular value thresholding algorithm for matrix completion. SIAM Journal on Optimization, 20(4):1956â€?982, 2010.
+[6] Jian Feng Cai, Emmanuel J Cand`es, and Zuowei Shen. A singular value thresholding algorithm for matrix completion. SIAM Journal on Optimization, 20(4):1956-1982, 2010.
 
 [7] Rasmus Munk Larsen. PROPACK-software for large and sparse svd calculations. Available online. URL http://sun.stanford.edu/rmunk/PROPACK, 2004.
 
