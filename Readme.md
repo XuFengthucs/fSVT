@@ -47,6 +47,8 @@ SVT/testSVT_pic.m is used to test the SVT in image recovery. The comment can be 
 
 Firstly you should get the Movielens datasets [8] from there website https://grouplens.org/datasets/movielens/, then read the load data matrix with CSR format with variable 'Origin'(3 columns with CSR format), and the run the SVT/data_init.m to divide the dataset into 80% and 20% or 90% and 10%(controlled by the variable 'percent'). Then run the SVT/testSVT_ml.m. The delta of 20M movielen dataset is 4 compared with 5 of 10M dataset.
 
+(4) The output in SVT/SVT.m and SVT/SVTlansvd.m every iteration is [#iters rank relative_error], and the output in SVT/fastSVT_Q.m and SVT/fastSVT_U.m every iteration is [#iters rank relative_error power_iteration_parameter].
+
 
 ##Reference
 
