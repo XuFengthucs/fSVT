@@ -52,7 +52,7 @@ Firstly you should get the Movielens datasets [8] from there website https://gro
 
 ##Reference
 
-[1] Xu Feng, Wenjian Yu, and Yaohang Li, "Faster matrix completion using randomized SVD," in Proc. the 30th IEEE International Conference on Tools with Artificial Intelligence (ICTAI) , Volos, Greece, Nov. 2018 (accepted).
+[1] Xu Feng, Wenjian Yu, and Yaohang Li, "Faster matrix completion using randomized SVD," in Proc. the 30th IEEE International Conference on Tools with Artificial Intelligence (ICTAI) , Volos, Greece, Nov. 2018.
 
 [2] N Halko, P. G Martinsson, and J. A Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. Siam Review, 53(2):217-288, 2011.
 
