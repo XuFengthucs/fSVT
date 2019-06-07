@@ -39,7 +39,7 @@ rSVD/ml.mat is the matrix cut from 10M movielens dataset[7]. rSVD/sample.m is us
 
 (2) The SVT for image recovery
 
-SVT/new4.jpg is the image used in this section. SVT/pic_Omega.mat owns Ome(20% nonzeros) and Ome10(10% nonzeros). 
+SVT/new4.jpg is the image used in this section. SVT/pic_Omega.mat owns Ome (20% nonzeros) and Ome10 (10% nonzeros). 
 
 SVT/testSVT_pic.m is used to test the SVT in image recovery. The comment can be changed to see the differences between SVT algorithm and fastSVT algorithm.
 
